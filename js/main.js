@@ -1,6 +1,7 @@
 const navItems = document.querySelector('.mobile-nav__items');
 const allNavItems = document.querySelectorAll('.mobile-nav__item');
 const burgerBtn = document.querySelector('.burger-btn');
+const faders = document.querySelectorAll('.fade-in');
 
 //otwieranie nawigacji
 const handleNav = () => {
@@ -29,8 +30,31 @@ const handleNavItemsAnimation = () => {
 		item.classList.toggle('mobile-nav-items-animation');
 		//animation-delay: .3s;
 		item.style.animationDelay = '.' + delayTime + 's';
-        delayTime++;
+		delayTime++;
 	});
 };
 
 burgerBtn.addEventListener('click', handleNav);
+
+const appearOptions = {
+	threshold: 1,
+
+};
+const appearOnScroll = new IntersectionObserver(function (
+	entries,
+	appearOnScroll
+) {
+	entries.forEach((entry) => {
+		if (!entry.isIntersecting) {
+			return;
+		} else {
+			entry.target.classList.add('fade-in--appear');
+			appearOnScroll.unobserve(entry.target);
+		}
+	});
+},
+appearOptions);
+
+faders.forEach((fader) => {
+	appearOnScroll.observe(fader);
+});
