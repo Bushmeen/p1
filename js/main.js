@@ -38,7 +38,7 @@ burgerBtn.addEventListener('click', handleNav);
 
 const appearOptions = {
 	threshold: 1,
-
+	rootMargin: '300px',
 };
 const appearOnScroll = new IntersectionObserver(function (
 	entries,
