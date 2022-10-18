@@ -177,6 +177,7 @@ body {
 		right: 25%;
 		transform: translate(50%, -50%);
 		width: 450px;
+		
 	}
 	&__text {
 		width: 100%;
@@ -256,14 +257,16 @@ body {
 			height: 400px;
 			max-width: 600px;
 			background-attachment: fixed;
-			margin: 0 2em 2em 2em;
-			padding: 4em;
+			margin-bottom: 2em;
+			padding: 2em;
+			margin: 2em;
 			border-radius: 10px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
 			color: $pure-white;
+
 			&-title {
 				text-align: center;
 				font-size: 2rem;
@@ -278,7 +281,142 @@ body {
 		}
 	}
 	.store {
-		background-color: $pure-white;
+		&__cards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		&__cards-row {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+		}
+		background-color: white;
+		.card {
+			background-size: cover;
+			background-position: center;
+			padding: 15rem 0 0;
+			border-radius: 10px;
+			width: 250px;
+			color: white;
+			transition: transform 0.5s;
+			overflow: hidden;
+			margin: 2em;
+			&--one {
+				background-image: url('../img/cover2.jpg');
+			}
+			&--two {
+				background-image: url('../img/cover.png');
+			}
+			&--three {
+				background-image: url('../img/cover3.jpeg');
+			}
+			&--four {
+				background-image: url('../img/cover4.jpg');
+			}
+			&--five {
+				background-image: url('../img/cover6.jpg');
+			}
+			&--six {
+				background-image: url('../img/cover5.jpg');
+			}
+
+			&__content {
+				--padding: 1.5em;
+				border-radius: 10px;
+				padding: var(--padding);
+				background: linear-gradient(
+					hsl(0 0% 0% /0),
+					hsl(20 0% 0%/0.8) 20% hsl(0 0% 0%/1)
+				);
+			}
+
+			&__title {
+				margin-bottom: 30px;
+				position: relative;
+				width: max-content;
+				max-width: 100%;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -2px;
+					left: calc(var(--padding) * -1);
+					height: 3px;
+					width: calc(100% + var(--padding));
+					background-color: #6f21ab;
+					border-radius: 10px;
+					transition: transform 0.3s;
+					transition-delay: 0.35s;
+					transform-origin: left;
+				}
+			}
+			&__price {
+				color: #b736fc;
+				font-size: 1.4rem;
+			}
+			&__old-price {
+				color: white;
+				font-size: 1.3rem;
+				margin-left: 5px;
+				text-decoration-line: line-through;
+			}
+			&__btn-box {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				height: 100%;
+				margin-top: 20px;
+				padding: 0.4em;
+			}
+			&__btn {
+				cursor: pointer;
+				background: white;
+				border-radius: 10px;
+				padding: 0.5em 1em;
+				border: none;
+				transition: background 0.5s, color 0.5s;
+				&:hover {
+					background: #6f21ab;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+@media (hover) {
+	.main {
+		.card {
+			&:hover,
+			&:hover:focus-within {
+				transform: scale(1.05);
+			}
+			&:hover .card__title::after,
+			&:focus-within .card__title::after {
+				transform: scaleX(1);
+			}
+
+			&:hover .card__content,
+			&:focus-within .card__content {
+				transform: translateY(0);
+				transition-delay: 0.2s;
+			}
+			&:focus-within .card__content {
+				transition-duration: 0s;
+			}
+			&__title {
+				&::after {
+					transform: scaleX(0);
+				}
+			}
+			&__content {
+				transform: translateY(65%);
+				transition: transform 0.5s;
+			}
+		}
 	}
 }
 
@@ -312,6 +450,19 @@ body {
 			.fa-brands {
 				font-size: 1.5rem;
 				margin-right: 4px;
+			}
+		}
+	}
+	.main {
+		.store {
+			.card {
+				width: 400px;
+				&__price {
+					font-size: 2rem;
+				}
+				&__old-price {
+					font-size: 1.7rem;
+				}
 			}
 		}
 	}
@@ -361,6 +512,21 @@ body {
 			}
 			&__card-text {
 				font-size: 2rem;
+			}
+		}
+		.store {
+			.card {
+				width: 600px;
+				padding: 20rem 0 0;
+				&__title {
+					font-size: 3rem;
+				}
+				&__text {
+					font-size: 2rem;
+				}
+				&__btn {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
@@ -449,6 +615,24 @@ body {
 		.about-game {
 			&__box {
 				flex-direction: row;
+			}
+		}
+		.store {
+			&__cards-row {
+				flex-direction: row;
+			}
+			.card {
+				width: 600px;
+				padding: 20rem 0 0;
+				&__title {
+					font-size: 2rem;
+				}
+				&__text {
+					font-size: 1.75rem;
+				}
+				&__btn {
+					font-size: 1.75rem;
+				}
 			}
 		}
 	}
