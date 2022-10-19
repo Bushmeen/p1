@@ -190,7 +190,7 @@ body {
 
 .header {
   height: 200vh;
-  background-image: url("https://github.com/Bushmeen/p1/blob/main/img/main-hero.jpg");
+  background-image: url("../img/main-hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
