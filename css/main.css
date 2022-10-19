@@ -190,7 +190,7 @@ body {
 
 .header {
   height: 200vh;
-  background-image: url("../img/headerimage.jpg");
+  background-image: url("/./img/headerimage.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -212,7 +212,7 @@ body {
           flex-direction: column;
   height: 100vh;
   padding: 2em;
-  background-image: url("../img/headerimage.jpg");
+  background-image: url("/./img/headerimage.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
