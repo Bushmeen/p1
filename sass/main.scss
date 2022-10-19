@@ -155,7 +155,7 @@ body {
 
 .header {
 	height: 200vh;
-	@include heroImgs('../img/mainhero.jpg');
+	@include heroImgs('../img/header.jpg');
 
 	&__box {
 		position: relative;
@@ -166,7 +166,7 @@ body {
 		height: 100vh;
 
 		padding: 2em;
-		@include heroImgs('../img/mainhero.jpg');
+		@include heroImgs('../img/header.jpg');
 	}
 	&__title {
 		width: 100%;
@@ -269,7 +269,7 @@ body {
 			align-items: center;
 		}
 		&__card {
-			background-image: url('../img/mainhero.jpg');
+			background-image: url('../img/header.jpg');
 			background-position: center;
 			background-size: cover;
 			height: 400px;
