@@ -18,6 +18,12 @@ body {
   font-size: 1.6rem;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: black;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -184,7 +190,7 @@ body {
 
 .header {
   height: 200vh;
-  background-image: url("../img/main-hero.jpg");
+  background-image: url("../img/main-hero.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

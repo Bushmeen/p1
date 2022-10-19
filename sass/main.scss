@@ -17,7 +17,11 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 }
-
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $black;
+}
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
@@ -151,7 +155,7 @@ body {
 
 .header {
 	height: 200vh;
-	@include heroImgs('../img/main-hero.jpg');
+	@include heroImgs('../img/main-hero.JPG');
 
 	&__box {
 		position: relative;

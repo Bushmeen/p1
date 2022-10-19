@@ -3,6 +3,10 @@ const allNavItems = document.querySelectorAll('.mobile-nav__item');
 const burgerBtn = document.querySelector('.burger-btn');
 const faders = document.querySelectorAll('.fade-in');
 
+const navBtnBras=document.querySelector(".burger-btn__bars")
+const allSections=document.querySelectorAll(".section")
+
+
 //otwieranie nawigacji
 const handleNav = () => {
 	navItems.classList.toggle('mobile-nav__items--active');
@@ -33,6 +37,10 @@ const handleNavItemsAnimation = () => {
 		delayTime++;
 	});
 };
+
+const handleObserver=()=>{
+
+}
 
 burgerBtn.addEventListener('click', handleNav);
 
