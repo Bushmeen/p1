@@ -155,7 +155,10 @@ body {
 
 .header {
 	height: 200vh;
-	@include heroImgs('/img/headerimg.jpg');
+	background: url('../img/headerimage.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 
 	&__box {
 		position: relative;
@@ -166,7 +169,10 @@ body {
 		height: 100vh;
 
 		padding: 2em;
-		@include heroImgs('/img/headerimg.jpg');
+		background: url('../img/headerimage.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 	}
 	&__title {
 		width: 100%;
@@ -269,9 +275,10 @@ body {
 			align-items: center;
 		}
 		&__card {
-			background-image: url('../img/header.jpg');
-			background-position: center;
+			background: url('../img/headerimage.jpg');
 			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
 			height: 400px;
 			max-width: 600px;
 			background-attachment: fixed;
@@ -413,7 +420,7 @@ body {
 			position: relative;
 			width: 100%;
 			height: 100%;
-			background-image: url('/img/las.jpg');
+			background-image: url('../img/las.jpg');
 			background-position: center;
 			background-size: cover;
 			background-attachment: fixed;
