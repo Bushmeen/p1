@@ -155,7 +155,7 @@ body {
 
 .header {
 	height: 200vh;
-	background: url('../img/headerimage.jpg');
+	background-image: url('../img/headerimage.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -169,7 +169,7 @@ body {
 		height: 100vh;
 
 		padding: 2em;
-		background: url('../img/headerimage.jpg');
+		background-image: url('../img/headerimage.jpg');
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
@@ -275,7 +275,7 @@ body {
 			align-items: center;
 		}
 		&__card {
-			background: url('../img/headerimage.jpg');
+			background-image: url('../img/headerimage.jpg');
 			background-size: cover;
 			background-position: center;
 			background-attachment: fixed;
