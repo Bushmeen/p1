@@ -155,7 +155,7 @@ body {
 
 .header {
 	height: 200vh;
-	@include heroImgs('../img/main-hero.JPG');
+	@include heroImgs('https://github.com/Bushmeen/p1/blob/main/img/main-hero.jpg');
 
 	&__box {
 		position: relative;
