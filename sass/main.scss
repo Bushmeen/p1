@@ -155,7 +155,7 @@ body {
 
 .header {
 	height: 200vh;
-	@include heroImgs('../img/header.jpg');
+	@include heroImgs('../img/headerimage.jpg');
 
 	&__box {
 		position: relative;
@@ -166,7 +166,7 @@ body {
 		height: 100vh;
 
 		padding: 2em;
-		@include heroImgs('../img/header.jpg');
+		@include heroImgs('../img/headerimage.jpg');
 	}
 	&__title {
 		width: 100%;
