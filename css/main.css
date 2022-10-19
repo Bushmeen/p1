@@ -190,7 +190,7 @@ body {
 
 .header {
   height: 200vh;
-  background-image: url("./img/header.jpg");
+  background-image: url("../img/header.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -212,7 +212,7 @@ body {
           flex-direction: column;
   height: 100vh;
   padding: 2em;
-  background-image: url("./img/header.jpg");
+  background-image: url("../img/header.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -338,7 +338,7 @@ body {
           align-items: center;
 }
 .main .about-game__card {
-  background-image: url("./img/header.jpg");
+  background-image: url("../img/header.jpg");
   background-position: center;
   background-size: cover;
   height: 400px;
@@ -520,7 +520,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("../img/three.IMG");
+  background-image: url("../img/three.img");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
