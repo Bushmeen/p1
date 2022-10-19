@@ -34,6 +34,10 @@ body {
 .section-heading--black {
   color: black;
 }
+.section-heading--end {
+  margin: 0;
+  margin-top: 100px;
+}
 
 .fade-in {
   opacity: 0;
@@ -654,6 +658,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.main .media .card {
+  margin-bottom: 200px;
+}
 .main .media .card__top i {
   margin-right: 2px;
 }
@@ -679,12 +686,91 @@ body {
   text-decoration: none;
   color: black;
   background-color: white;
+  border: 1px solid white;
   padding: 0.5em 1em;
   border-radius: 10px;
+  -webkit-transition: color 0.5s, background 0.5s, border 0.5s;
+  transition: color 0.5s, background 0.5s, border 0.5s;
+}
+.main .media .card__bottom a:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 .main .media .card__bottom--five a {
   color: white;
   background-color: black;
+}
+.main .media .card__bottom--five a:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.footer__box-top {
+  height: 40vh;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+.footer .box-top__title {
+  padding: 0.4em 1em;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.footer .box-top__text {
+  padding: 0.4em 1em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.footer .box-top__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.4em 1em;
+}
+.footer .box-top__input {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4em 1em;
+  height: 40px;
+}
+.footer .box-top__btn {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: white;
+  border: 1px solid white;
+  padding: 0.4em 1em;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  height: 40px;
+  -webkit-transition: color 0.5s, background 0.5s, border 0.5s;
+  transition: color 0.5s, background 0.5s, border 0.5s;
+}
+.footer .box-top__btn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 
 @media (hover) {
