@@ -18,12 +18,6 @@ body {
   font-size: 1.6rem;
 }
 
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-  background-color: black;
-}
-
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -157,6 +151,11 @@ body {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
+.mobile-nav .black-bars-color,
+.mobile-nav .black-bars-color::after,
+.mobile-nav .black-bars-color::before {
+  background-color: black;
+}
 
 @-webkit-keyframes navItemsAnimation {
   from {
@@ -194,6 +193,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-attachment: scroll;
 }
 .header__box {
   position: relative;
@@ -212,10 +212,6 @@ body {
           flex-direction: column;
   height: 100vh;
   padding: 2em;
-  background-image: url("../img/headerimage.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 .header__title {
   width: 100%;
@@ -341,10 +337,9 @@ body {
   background-image: url("../img/headerimage.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 400px;
   max-width: 600px;
-  background-attachment: fixed;
   margin-bottom: 2em;
   padding: 2em;
   margin: 2em;
@@ -1028,6 +1023,9 @@ body {
   .nav__logo {
     width: 200px;
   }
+  .header {
+    background-attachment: fixed;
+  }
   .header__title {
     width: 50%;
     font-size: 7rem;
@@ -1043,6 +1041,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .main .about-game__card {
+    background-attachment: fixed;
   }
   .main .store__cards-row {
     -webkit-box-orient: horizontal;

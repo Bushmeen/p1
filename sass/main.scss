@@ -17,11 +17,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 }
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-	background-color: $black;
-}
+
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
@@ -136,6 +132,11 @@ body {
 			}
 		}
 	}
+	.black-bars-color,
+	.black-bars-color::after,
+	.black-bars-color::before {
+		background-color: $black;
+	}
 }
 
 @keyframes navItemsAnimation {
@@ -155,10 +156,8 @@ body {
 
 .header {
 	height: 200vh;
-	background-image: url('../img/headerimage.jpg');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	@include heroImgs('../img/headerimage.jpg');
+	background-attachment: scroll;
 
 	&__box {
 		position: relative;
@@ -169,10 +168,6 @@ body {
 		height: 100vh;
 
 		padding: 2em;
-		background-image: url('../img/headerimage.jpg');
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
 	}
 	&__title {
 		width: 100%;
@@ -278,10 +273,9 @@ body {
 			background-image: url('../img/headerimage.jpg');
 			background-size: cover;
 			background-position: center;
-			background-attachment: fixed;
+			background-attachment: scroll;
 			height: 400px;
 			max-width: 600px;
-			background-attachment: fixed;
 			margin-bottom: 2em;
 			padding: 2em;
 			margin: 2em;
@@ -896,6 +890,8 @@ body {
 		}
 	}
 	.header {
+		background-attachment: fixed;
+
 		&__title {
 			width: 50%;
 			font-size: 7rem;
@@ -911,6 +907,9 @@ body {
 		.about-game {
 			&__box {
 				flex-direction: row;
+			}
+			&__card {
+				background-attachment: fixed;
 			}
 		}
 		.store {

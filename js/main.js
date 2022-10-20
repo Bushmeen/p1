@@ -3,13 +3,14 @@ const allNavItems = document.querySelectorAll('.mobile-nav__item');
 const burgerBtn = document.querySelector('.burger-btn');
 const faders = document.querySelectorAll('.fade-in');
 
-const navBtnBras=document.querySelector(".burger-btn__bars")
-const allSections=document.querySelectorAll(".section")
-
+const navBtnBras = document.querySelector('.burger-btn__bars');
+const allSections = document.querySelectorAll('.section');
 
 //otwieranie nawigacji
 const handleNav = () => {
 	navItems.classList.toggle('mobile-nav__items--active');
+
+	navBtnBras.classList.remove('black-bars-color');
 
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
@@ -38,11 +39,27 @@ const handleNavItemsAnimation = () => {
 	});
 };
 
-const handleObserver=()=>{
+const handleObserver = () => {
+	const currentSection = window.scrollY;
 
-}
+	allSections.forEach((section) => {
+		
+		if (
+			section.classList.contains('white-section') &&
+			section.offsetTop <= currentSection + 60
+		) {
+			navBtnBras.classList.add('black-bars-color');
+		} else if (
+			!section.classList.contains('white-section') &&
+			section.offsetTop <= currentSection + 60
+		) {
+			navBtnBras.classList.remove('black-bars-color');
+		}
+	});
+};
 
 burgerBtn.addEventListener('click', handleNav);
+window.addEventListener('scroll', handleObserver);
 
 const appearOptions = {
 	threshold: 1,
