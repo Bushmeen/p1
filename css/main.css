@@ -519,7 +519,7 @@ body {
   background-image: url("../img/las.jpg");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 .main .hero-box .hero__shadow {
   position: absolute;
@@ -1072,6 +1072,9 @@ body {
   }
   .main .store .card--six {
     margin-bottom: 200px;
+  }
+  .main .hero-box .hero {
+    background-attachment: fixed;
   }
 }
 @media (min-width: 1600px) {
